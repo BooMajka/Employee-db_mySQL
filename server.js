@@ -1,6 +1,10 @@
 const express = require('express');
 const db = require('./db/connection');
-
+const Inquirer = require("inquirer");
+const MySQL = require("mysql2");
+const Employee = require("./lib/Employee.js");
+const Role = require("./lib/Role.js");
+const Department = require("./lib/Department.js");
 
 const PORT = process.env.PORT || 3001;
 const app = express();

@@ -6,5 +6,8 @@ const db = mysql.createConnection({
   password: '',
   database: 'employees_db;'
 });
+db.connect(function (err) {
+  if (err) throw err;
+});
 
-module.exports = db;
+module.exports = db;x
