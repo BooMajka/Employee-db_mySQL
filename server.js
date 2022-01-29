@@ -16,9 +16,9 @@ let department = new Department(db);
 // This is the entry point of the user interface
 function start() {
 
-  db.query( `figlet Employees Database`, (err, res) => {
-    if (err) console.log(err);
-  });
+  // db.query( `figlet Employees Database`, (err, res) => {
+  //   if (err) console.log(err);
+  // });
 
 
   let question = "What would you like to do?";
