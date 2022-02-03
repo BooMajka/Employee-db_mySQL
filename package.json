@@ -1,5 +1,5 @@
 {
-  "name": "employee-database_mysql",
+  "name": "employeetracker",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,10 +8,10 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2",
-    "inquirer": "^8.2.0",
+    "chalklet": "^1.0.0",
+    "figlet": "^1.5.0",
+    "inquirer": "^6.2.1",
     "mysql2": "^2.3.3"
   }
 }
