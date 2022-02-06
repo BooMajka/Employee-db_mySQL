@@ -174,12 +174,12 @@ function addEmployee() {
       message: "Select employee role:",
       choices: roleChoice
     },
-    {
-      name: "department_id",
-      type: "rawlist",
-      message: "Select employee's department:",
-      choices: deptChoice
-    },
+    // {
+    //   name: "department_id",
+    //   type: "rawlist",
+    //   message: "Select employee's department:",
+    //   choices: deptChoice
+    // },
 
   ])
     .then(function(answer) {
@@ -191,12 +191,12 @@ function addEmployee() {
           }
         };
 
-        var chosenDept;
-        for (var i = 0; i < resDept.length; i++) {
-          if (resDept[i].name === answer.department_id) {
-            chosenDept = resDept[i];
-          }
-        };
+        // var chosenDept;
+        // for (var i = 0; i < resDept.length; i++) {
+        //   if (resDept[i].name === answer.department_id) {
+        //     chosenDept = resDept[i];
+        //   }
+        // };
       //connection to insert response into database  
       connection.query(
         "INSERT INTO employees SET ?",
@@ -204,7 +204,8 @@ function addEmployee() {
           first_name: answer.firstName,
           last_name: answer.lastName,
           role_id: chosenRole.id,
-          department_id: chosenDept.id
+          manager_id: null
+          // department_id: chosenDept.id
         },
         function(err) {
           if (err) throw err;
